@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Venkatesh | Portfolio</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <style>
+    /* Reset & Global Styles */
+    *, *::before, *::after {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    :root {
+      --background: #0b0b0c;
+      --glass-bg: rgba(255, 255, 255, 0.05);
+      --glass-border: rgba(255, 255, 255, 0.1);
+      --accent: #00c8ff;
+      --text: #eaeaea;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--background);
+      color: var(--text);
+      padding: 2rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-height: 100vh;
+      background-image:
+        radial-gradient(circle at 30% 30%, rgba(255,255,255,0.015) 2px, transparent 2px),
+        radial-gradient(circle at 70% 70%, rgba(255,255,255,0.01) 2px, transparent 2px);
+      background-size: 140px 140px;
+    }
+
+    section {
+      width: 100%;
+      max-width: 900px;
+      margin-bottom: 2.5rem;
+      padding: 2.5rem;
+      border-radius: 1.5rem;
+      background: var(--glass-bg);
+      border: 1px solid var(--glass-border);
+      backdrop-filter: blur(15px) saturate(160%);
+      -webkit-backdrop-filter: blur(15px) saturate(160%);
+      box-shadow:
+        0 20px 30px rgba(0, 0, 0, 0.6),
+        inset 0 0 8px rgba(255, 255, 255, 0.03);
+      transition: 0.3s ease;
+    }
+
+    section:hover {
+      transform: translateY(-3px);
+      box-shadow:
+        0 30px 45px rgba(0, 0, 0, 0.7),
+        inset 0 0 12px rgba(255, 255, 255, 0.04);
+    }
+
+    h1 {
+      font-size: 2.6rem;
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+    }
+
+    h2 {
+      font-size: 1.4rem;
+      font-weight: 400;
+      color: var(--accent);
+      margin-bottom: 1rem;
+    }
+
+    p {
+      font-size: 1rem;
+      line-height: 1.7;
+      margin-bottom: 0.5rem;
+    }
+
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .card {
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 1.2rem;
+      padding: 1.5rem;
+      backdrop-filter: blur(12px) saturate(180%);
+      -webkit-backdrop-filter: blur(12px) saturate(180%);
+      box-shadow:
+        0 12px 20px rgba(0,0,0,0.5),
+        inset 0 0 6px rgba(255,255,255,0.02);
+      word-wrap: break-word;
+      overflow-wrap: break-word;
+      transition: 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-4px);
+      box-shadow:
+        0 16px 24px rgba(0,0,0,0.6),
+        inset 0 0 8px rgba(255,255,255,0.03);
+    }
+
+    .card h3 {
+      font-size: 1.2rem;
+      font-weight: 500;
+      color: var(--accent);
+      margin-bottom: 0.6rem;
+    }
+
+    .card p {
+      font-size: 0.95rem;
+      color: #d0d0d0;
+      line-height: 1.6;
+    }
+
+    footer {
+      text-align: center;
+      padding: 1rem;
+      font-size: 0.85rem;
+      opacity: 0.7;
+    }
+
+    @media (max-width: 500px) {
+      section {
+        padding: 1.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- About -->
+  <section id="about">
+    <h1>Venkatesh</h1>
+    <h2>Computer Science Student · Age 19 · VMR College</h2>
+    <p>
+      I am a passionate and driven individual with a strong interest in artificial intelligence and web development.
+      My academic background is in computer science, and I enjoy working on real-world tech solutions.
+    </p>
+    <p>
+      Below are some of my featured projects that reflect both creativity and functionality.
+    </p>
+  </section>
+
+  <!-- Projects -->
+  <section id="projects">
+    <h2>Projects</h2>
+    <div class="projects-grid">
+      <!-- Jarvis Project -->
+      <div class="card">
+        <h3>Jarvis – Personal AI Assistant</h3>
+        <p>
+          A Python-based desktop assistant with voice recognition capabilities. Jarvis can perform tasks like opening apps,
+          fetching weather, reading news, managing schedules, and handling basic system commands through natural language input.
+        </p>
+      </div>
+
+      <!-- Online Auction Webpage -->
+      <div class="card">
+        <h3>Online Auction Platform</h3>
+        <p>
+          A secure and dynamic auction website developed with HTML, CSS, and JavaScript. It supports real-time bidding,
+          user authentication, product listings, and responsive UI. Backend powered by Firebase for real-time updates and data handling.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    © 2025 Venkatesh · Crafted with precision and a love for modern minimalism.
+  </footer>
+
+</body>
+</html>
