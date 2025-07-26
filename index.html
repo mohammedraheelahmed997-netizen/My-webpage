@@ -2,183 +2,68 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Venkatesh | Portfolio</title>
-
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
-
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>VoidHwa</title>
   <style>
-    /* Reset & Global Styles */
-    *, *::before, *::after {
+    * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
     }
 
-    :root {
-      --background: #0b0b0c;
-      --glass-bg: rgba(255, 255, 255, 0.05);
-      --glass-border: rgba(255, 255, 255, 0.1);
-      --accent: #00c8ff;
-      --text: #eaeaea;
-    }
-
     body {
-      font-family: 'Inter', sans-serif;
-      background: var(--background);
-      color: var(--text);
-      padding: 2rem;
+      height: 100vh;
+      background: url('content://ru.zdevs.zarchiver.external/storage/emulated/0/Pictures/Instagram/IMG_20250726_182824_212.jpg') center/cover no-repeat fixed;
       display: flex;
-      flex-direction: column;
+      justify-content: center;
       align-items: center;
-      min-height: 100vh;
-      background-image:
-        radial-gradient(circle at 30% 30%, rgba(255,255,255,0.015) 2px, transparent 2px),
-        radial-gradient(circle at 70% 70%, rgba(255,255,255,0.01) 2px, transparent 2px);
-      background-size: 140px 140px;
-    }
-
-    section {
-      width: 100%;
-      max-width: 900px;
-      margin-bottom: 2.5rem;
-      padding: 2.5rem;
-      border-radius: 1.5rem;
-      background: var(--glass-bg);
-      border: 1px solid var(--glass-border);
-      backdrop-filter: blur(15px) saturate(160%);
-      -webkit-backdrop-filter: blur(15px) saturate(160%);
-      box-shadow:
-        0 20px 30px rgba(0, 0, 0, 0.6),
-        inset 0 0 8px rgba(255, 255, 255, 0.03);
-      transition: 0.3s ease;
-    }
-
-    section:hover {
-      transform: translateY(-3px);
-      box-shadow:
-        0 30px 45px rgba(0, 0, 0, 0.7),
-        inset 0 0 12px rgba(255, 255, 255, 0.04);
-    }
-
-    h1 {
-      font-size: 2.6rem;
-      font-weight: 600;
-      margin-bottom: 0.5rem;
-    }
-
-    h2 {
-      font-size: 1.4rem;
-      font-weight: 400;
-      color: var(--accent);
-      margin-bottom: 1rem;
-    }
-
-    p {
-      font-size: 1rem;
-      line-height: 1.7;
-      margin-bottom: 0.5rem;
-    }
-
-    .projects-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 1.5rem;
+      font-family: serif;
+      backdrop-filter: blur(2px);
     }
 
     .card {
-      background: rgba(255, 255, 255, 0.04);
-      border: 1px solid rgba(255, 255, 255, 0.08);
-      border-radius: 1.2rem;
-      padding: 1.5rem;
-      backdrop-filter: blur(12px) saturate(180%);
-      -webkit-backdrop-filter: blur(12px) saturate(180%);
-      box-shadow:
-        0 12px 20px rgba(0,0,0,0.5),
-        inset 0 0 6px rgba(255,255,255,0.02);
-      word-wrap: break-word;
-      overflow-wrap: break-word;
-      transition: 0.3s ease;
-    }
-
-    .card:hover {
-      transform: translateY(-4px);
-      box-shadow:
-        0 16px 24px rgba(0,0,0,0.6),
-        inset 0 0 8px rgba(255,255,255,0.03);
-    }
-
-    .card h3 {
-      font-size: 1.2rem;
-      font-weight: 500;
-      color: var(--accent);
-      margin-bottom: 0.6rem;
-    }
-
-    .card p {
-      font-size: 0.95rem;
-      color: #d0d0d0;
-      line-height: 1.6;
-    }
-
-    footer {
+      background-color: rgba(0, 0, 0, 0.6);
+      border-radius: 30px;
+      padding: 50px 30px;
       text-align: center;
-      padding: 1rem;
-      font-size: 0.85rem;
-      opacity: 0.7;
+      box-shadow: 0 0 30px rgba(255, 0, 0, 0.3);
+      backdrop-filter: blur(10px);
     }
 
-    @media (max-width: 500px) {
-      section {
-        padding: 1.5rem;
-      }
+    .card h1 {
+      font-size: 2.5rem;
+      color: #cc0022;
+      font-style: italic;
+      font-weight: bold;
+      margin-bottom: 30px;
+      text-shadow: 0 0 2px #cc0022, 0 0 8px #cc0022;
+    }
+
+    .enter-btn {
+      padding: 12px 28px;
+      font-size: 1rem;
+      font-weight: bold;
+      color: white;
+      background: rgba(255, 0, 0, 0.2);
+      border: none;
+      border-radius: 20px;
+      box-shadow: 0 0 20px rgba(255, 0, 0, 0.4);
+      backdrop-filter: blur(5px);
+      transition: all 0.3s ease;
+      cursor: pointer;
+    }
+
+    .enter-btn:hover {
+      background: rgba(255, 0, 0, 0.4);
+      transform: scale(1.05);
+      box-shadow: 0 0 25px rgba(255, 0, 0, 0.7);
     }
   </style>
 </head>
 <body>
-
-  <!-- About -->
-  <section id="about">
-    <h1>Venkatesh</h1>
-    <h2>Computer Science Student · Age 19 · VMR College</h2>
-    <p>
-      I am a passionate and driven individual with a strong interest in artificial intelligence and web development.
-      My academic background is in computer science, and I enjoy working on real-world tech solutions.
-    </p>
-    <p>
-      Below are some of my featured projects that reflect both creativity and functionality.
-    </p>
-  </section>
-
-  <!-- Projects -->
-  <section id="projects">
-    <h2>Projects</h2>
-    <div class="projects-grid">
-      <!-- Jarvis Project -->
-      <div class="card">
-        <h3>Jarvis – Personal AI Assistant</h3>
-        <p>
-          A Python-based desktop assistant with voice recognition capabilities. Jarvis can perform tasks like opening apps,
-          fetching weather, reading news, managing schedules, and handling basic system commands through natural language input.
-        </p>
-      </div>
-
-      <!-- Online Auction Webpage -->
-      <div class="card">
-        <h3>Online Auction Platform</h3>
-        <p>
-          A secure and dynamic auction website developed with HTML, CSS, and JavaScript. It supports real-time bidding,
-          user authentication, product listings, and responsive UI. Backend powered by Firebase for real-time updates and data handling.
-        </p>
-      </div>
-    </div>
-  </section>
-
-  <!-- Footer -->
-  <footer>
-    © 2025 Venkatesh · Crafted with precision and a love for modern minimalism.
-  </footer>
-
+  <div class="card">
+    <h1>𝒗𝒐𝒊𝒅𝒉𝒘𝒂</h1>
+    <button class="enter-btn" onclick="location.href='page2.html'">Enter</button>
+  </div>
 </body>
 </html>
